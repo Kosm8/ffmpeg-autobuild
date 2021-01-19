@@ -21,7 +21,7 @@ jobs:
         run: mv -v ./ffmpeg-windows-build-helpers/* ./
         
       - name: Compile FFmpeg using ffmpeg-windows-build-helpers
-        run: ./cross_compile_ffmpeg.sh --ffmpeg-source-dir=$GITHUB_WORKSPACE/ffmpeg-source --gcc-cpu-count=2 --disable-nonfree=n --disable-libilbc --disable-libmfx --disable-libspeex --disable-nvenc --disable-libaom --disable-libkvazaar --disable-libtheora --disable-libtwolame --disable-encoder=vorbis --disable-libvorbis --disable-libwebp --disable-libx265 --disable-libxavs --disable-libxvid --disable-libgme --disable-libflite --sandbox-ok=y --compiler-flavors=win32
+        run: ./cross_compile_ffmpeg.sh --ffmpeg-source-dir=$GITHUB_WORKSPACE/ffmpeg-source --gcc-cpu-count=2 --disable-nonfree=n --disable-amf=y --disable-libilbc=y --disable-libmfx=y --disable-libspeex=y --disable-nvenc=y --disable-libaom=y --disable-libkvazaar=y --disable-libtheora=y --disable-libtwolame=y --disable-encoder=vorbis=y --disable-libvorbis=y --disable-libwebp=y --disable-libx265=y --disable-libxavs=y --disable-libxvid=y --disable-libgme=y --disable-libflite=y --sandbox-ok=y --compiler-flavors=win32
         
       - name: 7-Zip FFmpeg win32 custom nonfree
         working-directory: ffmpeg-source
